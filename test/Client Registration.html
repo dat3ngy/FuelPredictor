@@ -2,26 +2,28 @@
     <header><h1>Client Registration</h1></header>
 
     <body>
-        <p>Please enter your username and password to complete your registration:</p><br>
-        
-        <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        </div>   
-        
-        <br>
+        <form method="POST" action="ClientProfile.html">  
+            <p>Please enter your username and password to complete your registration:</p><br>
 
-        <div>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" maxlength="16">
-        </div>
-    
-        <br>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>   
+
+            <br>
+
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" maxlength="16">
+            </div>
+
+            <br>
+
+            <div>
+                <input type="submit" value="Register">
+            </div>
         
-        <div>
-        <input type="submit" value="Register">
-        </div>
-        
+        </form>
 
     </body>
 
