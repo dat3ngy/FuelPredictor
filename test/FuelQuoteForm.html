@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <header><h1>Fuel Quote Form</h1></header>
-    <body>
+    <header>
         <link rel="stylesheet" href="style.css">
-        <p>Once you fill out this form, we will be able to generate the rate of fuel based on your information.</p>
-        <div>
-            <label for="request">Gallons Requested:</label>
-            <input type="number" id="request" name="request" required>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fuel Rate Predictor - Fuel Quote Form</title>
+        <h1>Fuel Quote Form</h1>
+        <script src="gallonCal.js"></script>
+    </header>
+    <body>
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card">
+              <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+              <a href="menu.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+              <a href="ClientProfile.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Client Profile</a>
+              <a href="FuelQuoteForm.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fuel Quote Form</a>
+              <a href="FuelQuoteHistory.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fuel Quote History</a>
+              <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <a href="#" class="w3-bar-item w3-button">About us</a>
+                  <a href="#" class="w3-bar-item w3-button">Join us</a>
+                  <a href="#" class="w3-bar-item w3-button">Media</a>
+                </div>
+              </div>
+              <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+            </div>
         </div>
-        <div>
-            <p>Address: ... </p> <!--Adress-->
-        </div>
-        <br>
-        <div>
-            <label for="delivery">Delivery Date:</label>
-            <input type="date" id="delivery" name="delivery">
-        </div>
-        <div>
-            <p>Suggested Price / gallon: ...</p>
-        </div>        
-        <div>
-            <p>Total Amount Due: ... </p>
-        </div>
+        <div class="boardbackground w3-container w3-content w3-padding-64" style="max-width:800px" id="contact" >
+            <h2 class="w3-wide w3-center">REQUEST A FUEL QUOTE FORM</h2>
+            <p class="w3-opacity w3-center"><i>Once you fill out this form, we will be able to generate the rate of fuel based on your information.</i></p>
+            <div class="w3-row w3-padding-32">
+              <div class="w3-col m6 w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker" style="width:30px"></i> Houston, TX, USA<br>
+                <i class="fa fa-phone" style="width:30px"></i> Phone: +00 121212<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@uh.edu<br>
+                <footer><a href="menu.html">Back to the main page</a></footer>
+              </div>
+              
+              <div class="w3-col m6">
+                <form target="_self">
+                  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half">
+                      <b><label class="style1" for="request">Gallon(s) Requested</label></b>
+                      <input class="w3-input w3-border" id="gallonRequest" type="number" placeholder="Number of gallons" required name="gallonRequest">
+                    </div>
+                    <div class="w3-half">
+                      <b><label class="style1" for="request"> Delivery Date</label></b>
+                      <input class="w3-input w3-border" id="dateRequest" type="date" value="2022-02-18" required>
+                        
+                    </div>
+                  </div>
+                  <p>Address: 4800 Calhoun Rd, Houston, TX 77004 </p> <!--Adress-->
+                  <p>Suggested Price / gallon: $3.05</p>
+                  <button class="w3-button w3-black w3-section w3-right" type="button" id="submitgallonrq" onclick="gallonCal()">CALCULATE</button>
+                  <p>Total Amount Due: </p>
+                  <div id="printtotal" class="style2">
+                        $0.00
+                  </div>
+                  <br> <br>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+             
+        
     </body>
-
-    <footer><a href="menu.html">Back to the mainpage</a></footer>
 </html>
