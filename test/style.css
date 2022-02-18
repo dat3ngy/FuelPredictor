@@ -1,11 +1,20 @@
 h1 {
-
+  color: red;
+  font-family: Sans-serif;
+  text-align: center;
+  border: 5px double blue;
+  padding:10px;
 }
 
 h2 {
-
+  color: black;
+  font-family: Time New Romans;
+  text-indent: 20px;
+  margin-bottom: 6px;
 }
 
 p {
-
+  margin-bottom: 3px;
+  font-family:Georgia;
+  
 }
