@@ -1,0 +1,27 @@
+{
+  "name": "fuelpredictor",
+  "version": "1.0.0",
+  "description": "Group 33 COSC 4353 Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dat3ngy/FuelPredictor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dat3ngy/FuelPredictor/issues"
+  },
+  "homepage": "https://github.com/dat3ngy/FuelPredictor#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
