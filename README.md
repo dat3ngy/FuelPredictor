@@ -10,4 +10,4 @@ Todo:
 
 Using node js libraries: express and cors
 
-For development, using node js library: nodemon
+For development, using node js library: nodemon, jest, and puppeteer
