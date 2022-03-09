@@ -4,7 +4,8 @@
   "description": "Group 33 COSC 4353 Project",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
     "express": "^4.17.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.5.0"
   }
 }
