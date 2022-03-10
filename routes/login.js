@@ -6,7 +6,6 @@ router.post('/', (req, res) => {
     console.log(`Login - User: ${user}`)
     pw = req.body.pw
     console.log(`Login - Password: ${pw}`)
-
     res.sendFile('./menu.html', {root: './public'})
 })
 
