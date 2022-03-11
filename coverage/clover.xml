@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1646974521686" clover="3.2.0">
-  <project timestamp="1646974521686" name="All files">
-    <metrics statements="54" coveredstatements="25" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0" elements="60" coveredelements="25" complexity="0" loc="54" ncloc="54" packages="2" files="4" classes="4"/>
+<coverage generated="1646981327010" clover="3.2.0">
+  <project timestamp="1646981327010" name="All files">
+    <metrics statements="55" coveredstatements="25" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0" elements="61" coveredelements="25" complexity="0" loc="55" ncloc="55" packages="2" files="4" classes="4"/>
     <package name="FuelPredictor">
       <metrics statements="14" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="app.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\app.js">
@@ -23,9 +23,9 @@
       </file>
     </package>
     <package name="FuelPredictor.routes">
-      <metrics statements="40" coveredstatements="12" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="41" coveredstatements="12" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="login.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\routes\login.js">
-        <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="10" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -34,7 +34,8 @@
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
       </file>
       <file name="profileManagement.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\routes\profileManagement.js">
         <metrics statements="17" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
