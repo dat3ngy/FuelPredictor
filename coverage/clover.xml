@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1646889605882" clover="3.2.0">
-  <project timestamp="1646889605882" name="All files">
-    <metrics statements="56" coveredstatements="32" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2" elements="63" coveredelements="34" complexity="0" loc="56" ncloc="56" packages="2" files="4" classes="4"/>
+<coverage generated="1646974521686" clover="3.2.0">
+  <project timestamp="1646974521686" name="All files">
+    <metrics statements="54" coveredstatements="25" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0" elements="60" coveredelements="25" complexity="0" loc="54" ncloc="54" packages="2" files="4" classes="4"/>
     <package name="FuelPredictor">
-      <metrics statements="16" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="server.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\server.js">
-        <metrics statements="16" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="FuelPredictor.routes">
-      <metrics statements="40" coveredstatements="17" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
-      <file name="login.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\routes\login.js">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+      <metrics statements="14" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="app.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\app.js">
+        <metrics statements="14" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="FuelPredictor.routes">
+      <metrics statements="40" coveredstatements="12" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="login.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\routes\login.js">
+        <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
       </file>
       <file name="profileManagement.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\routes\profileManagement.js">
         <metrics statements="17" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -56,13 +54,13 @@
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
       <file name="register.js" path="C:\Users\danie\vscode\projects\4353\FuelPredictor\routes\register.js">
         <metrics statements="14" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
@@ -73,7 +71,7 @@
         <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="14" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
     </package>
   </project>

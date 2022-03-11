@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer')
-const server = require('./server')
+const app = require('./app')
 
-test('tests if able to connect to the web server', async () => {
+test('tests if able to load index.html', async () => {
     const browser = await puppeteer.launch({
         headless: false,
     })
