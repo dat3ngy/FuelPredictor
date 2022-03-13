@@ -8,7 +8,7 @@ Todo:
 - Fuel Quote / Quote History
 - Pricing module (no implementation)?
 
-Using node js libraries: express and cors
+Using node js libraries: express
 
 For development, using node js library: nodemon, jest, and puppeteer
 
