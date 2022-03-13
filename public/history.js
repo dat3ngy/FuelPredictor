@@ -10,11 +10,16 @@ async function gallonCal(){
             headers: { "Content-Type": "application/json" },
         });
         document.getElementById("printtotal").innerHTML = '$' + total;
-    } catch(err){
+    }catch(err){
         console.log(err.message);
     }
 }
  
+
+
+
+
+
 
 async function fuelQuoteHist() {
     try{
@@ -23,10 +28,11 @@ async function fuelQuoteHist() {
             headers: { "Content-Type": "application/json" },
         });
         const quote = await response.json();
-        if (quote.datereqs.length > 0){
+        if (quote.datereqs.length > 0){            
             var btn = document.getElementById("hist");
             btn.innerHTML = "";
             console.log(quote.datereqs.length);
+            console.log('testing line');
             for (var i = 0; i < quote.datereqs.length; i++){
                 btn.innerHTML += quote.datereqs[i] + "<div style='border-style: double'> <h3>" + "Rate: $3.05" + "<br> Gallon(s) requested: " + quote.galreqs[i] + "<br> Total: $" + quote.totals[i] + "</h3></div><br>";
             }

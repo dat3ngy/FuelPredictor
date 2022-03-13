@@ -1,3 +1,6 @@
+
+console.log('testing line');
+console.log('testing line');
 function containsChar(s) {
     for (var i = 0; i < s.length; i++){
         let c = s[i].charCodeAt(0);
@@ -6,22 +9,23 @@ function containsChar(s) {
     }
     return false;
 }
+console.log('testing line');
 
 function containsSpecialChars(str) {
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     return specialChars.test(str);
 }
-  
 function containsSpecialCharsNumbers(str) {
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~1234567890]/;
     return specialChars.test(str);
 }
-
 function containsSpace(s){
     for (var i = 0; i < s.length; i++)
         if (s[i] == ' ') return true;
     return false;
 }
+console.log('testing line');
+console.log('testing line');
 
 function add(a,b){
     return a + b;
@@ -40,7 +44,7 @@ async function checkValidsUserPwd(){
         var ascii = password[0].charCodeAt(0);
         let validUser = (containsSpace(username) == false) && (!containsSpecialChars(username));
         let validPwd = (password.length >= 5) && (65 <= ascii && ascii <= 90) && (containsSpace(password) == false) && (containsSpecialCharsNumbers(password));
-        //check invalid
+
         if (validUser == false){
             alert("Invalid Username!");
             event.preventDefault();
@@ -61,7 +65,7 @@ async function checkValidsUserPwd(){
             else if (containsSpecialCharsNumbers(password) == false){
                 alert("Invalid Password! Must have at least 1 special character or number");
                 event.preventDefault();
-            }
+            }console.log('testing line');
         }
         else if (password != confirm){
             alert("Password does not match!");
