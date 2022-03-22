@@ -1,6 +1,4 @@
 
-console.log('testing line');
-console.log('testing line');
 function containsChar(s) {
     for (var i = 0; i < s.length; i++){
         let c = s[i].charCodeAt(0);
@@ -9,7 +7,6 @@ function containsChar(s) {
     }
     return false;
 }
-console.log('testing line');
 
 function containsSpecialChars(str) {
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -24,11 +21,26 @@ function containsSpace(s){
         if (s[i] == ' ') return true;
     return false;
 }
-console.log('testing line');
-console.log('testing line');
 
 function add(a,b){
     return a + b;
+}
+
+window.onload = async function callUser(){
+    try{
+        const response = await fetch(`http://localhost:3000/getprofile/`, {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+        });
+
+    const info = await response.json();
+    
+    var btn = document.getElementById("hello-user");
+    btn.innerHTML = info.username;
+    } catch(err){
+        console.log(err.message);
+    }
+    
 }
 
 async function checkValidsUserPwd(){
@@ -72,7 +84,6 @@ async function checkValidsUserPwd(){
             event.preventDefault();
         }
         else{ ///valid, call server
-            console.log("456");
             try{
                 const response = await fetch(`http://localhost:3000/register/${username}/${password}/${confirm}`, {
                     method: "GET",
@@ -123,6 +134,3 @@ async function checkZip(){
     }
     
 }
- 
-module.exports = containsChar;
-module.exports = checkZip;

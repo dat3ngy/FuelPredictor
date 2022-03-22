@@ -14,14 +14,9 @@ async function gallonCal(){
         console.log(err.message);
     }
 }
- 
 
 
-
-
-
-
-async function fuelQuoteHist() {
+window.onload = async function fuelQuoteHist() {
     try{
         const response = await fetch(`http://localhost:3000/quote`, {
             method: "GET",
@@ -32,7 +27,6 @@ async function fuelQuoteHist() {
             var btn = document.getElementById("hist");
             btn.innerHTML = "";
             console.log(quote.datereqs.length);
-            console.log('testing line');
             for (var i = 0; i < quote.datereqs.length; i++){
                 btn.innerHTML += quote.datereqs[i] + "<div style='border-style: double'> <h3>" + "Rate: $3.05" + "<br> Gallon(s) requested: " + quote.galreqs[i] + "<br> Total: $" + quote.totals[i] + "</h3></div><br>";
             }
@@ -41,6 +35,3 @@ async function fuelQuoteHist() {
         console.log(err.message);
     }
 }
-
-
-module.exports = { gallonCal }
