@@ -1,7 +1,6 @@
 // Libraries used for the Node Express Server
 const express = require('express')
 const app = express()
-const cors = require('cors')
 const port = 3000
 
 // Used for parsing JSON to retrieve information from frontend
@@ -10,7 +9,6 @@ app.use(express.json())
 app.use(express.urlencoded({
     extended: true
 }))
-app.use(cors())
 
 // Start at index.html
 app.get('/', (req, res) => {
