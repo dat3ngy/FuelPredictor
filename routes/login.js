@@ -24,4 +24,19 @@ router.get('/:user/:pw', async (req, res) => {
     }
 })
 
+router.get('/:user', async (req, res) => {
+    console.log('Checking username exists...');
+    const {user} = req.params;
+    console.log(`Checking - User: ${user}`)
+    const checkUser = await pool.query(`SELECT * FROM usercredentials WHERE username = '${user}'`);
+    if (checkUser.rows.length > 0){
+        console.log('Username exists! Invalid!....');
+        res.json(checkUser);
+    }
+    else {
+        console.log('Username does not exist! Valid!....');
+        res.json(checkUser);
+    }
+})
+
 module.exports = router

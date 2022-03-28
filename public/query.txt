@@ -17,7 +17,8 @@ CREATE TABLE ClientInformation(
 
 DROP TABLE IF EXISTS FuelQuote CASCADE;
 CREATE TABLE FuelQuote(
- username VARCHAR (30) PRIMARY KEY,
+ id INT PRIMARY KEY,
+ username VARCHAR (30),
  galreqs INT NOT NULL,
  deladdr VARCHAR (100) NOT NULL,
  deldate VARCHAR (20) NOT NULL,

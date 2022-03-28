@@ -3,7 +3,7 @@ const router = express.Router()
 const pool = require('./creds');
 
 
-router.get('/:fullName/:address1/:address2/:city/:state/:zipcode', async (req, res) => {
+router.post('/:fullName/:address1/:address2/:city/:state/:zipcode', async (req, res) => {
     const{fullName, address1, address2, city, state, zipcode} = req.params;
     console.log(`Client Profile - Full Name: ${fullName}`)
     console.log(`Client Profile - Address 1: ${address1}`)

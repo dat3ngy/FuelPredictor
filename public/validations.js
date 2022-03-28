@@ -26,25 +26,29 @@ function add(a,b){
     return a + b;
 }
 
-window.onload = async function callUser(){
-    try{
-        const response = await fetch(`http://localhost:3000/getprofile/`, {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-        });
+async function UserNameExist(user) {
+        try{
+            const response = await fetch(`http://localhost:3000/login/${user}`, {
+                method: "GET",
+                headers: { "Content-Type": "application/json" },
+            });
 
-    const info = await response.json();
-    
-    var btn = document.getElementById("hello-user");
-    btn.innerHTML = info.username;
-    } catch(err){
-        console.log(err.message);
-    }
-    
+            const checkUser = await response.json();
+            console.log(checkUser.rows.length);
+            if (checkUser.rows.length == 0){
+                return false;
+            }
+            else{
+                return true;
+            }
+        } catch(err){
+            console.log(err.message);
+        }
+        
 }
 
 async function checkValidsUserPwd(){
-    console.log("123");
+    console.log("Checking valid username and password...");
     const username = document.querySelector("#user").value;
     const password = document.querySelector("#pw").value;
     const confirm = document.querySelector("#confPw").value;
@@ -59,6 +63,10 @@ async function checkValidsUserPwd(){
 
         if (validUser == false){
             alert("Invalid Username!");
+            event.preventDefault();
+        }
+        else if (await UserNameExist(username) == true){
+            alert("Username is taken! Please try a different username!");
             event.preventDefault();
         }
         else if (validPwd == false){
@@ -86,10 +94,11 @@ async function checkValidsUserPwd(){
         else{ ///valid, call server
             try{
                 const response = await fetch(`http://localhost:3000/register/${username}/${password}/${confirm}`, {
-                    method: "GET",
+                    method: "POST",
                     headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify()
                 });
-                
+            window.location.href = "afterreg.html";
             } catch(err){
                 console.log(err.message);
             }
@@ -121,8 +130,9 @@ async function checkZip(){
         else{
             try{
                 const response = await fetch(`http://localhost:3000/profile/${fullName}/${address1}/${address2}/${city}/${state}/${zipcode}`, {
-                    method: "GET",
+                    method: "POST",
                     headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify()
                 });
                 var btn = document.getElementById("updatesuccess");
                 btn.innerHTML = "<b>Update successfully!</b>";

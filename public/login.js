@@ -2,9 +2,6 @@
 async function confirmInput() {
     const user = document.querySelector("#user").value;
     const pw = document.querySelector("#pw").value;
-
-
-       
         try{
             const response = await fetch(`http://localhost:3000/login/${user}/${pw}`, {
                 method: "GET",
