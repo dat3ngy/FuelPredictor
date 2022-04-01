@@ -29,6 +29,10 @@ app.use('/login', loginRouter)
 const profileManRouter = require('./routes/profileManagement')
 app.use('/profile', profileManRouter)
 
+// Get Profile information
+const getProfileRouter = require('./routes/getprofile')
+app.use('/getprofile', getProfileRouter)
+
 // Fuel Quote
 const quoteRouter = require('./routes/historyModule')
 app.use('/quote', quoteRouter);

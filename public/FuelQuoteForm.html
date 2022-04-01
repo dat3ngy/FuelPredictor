@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fuel Rate Predictor - Fuel Quote Form</title>
         <script src="history.js"></script>
+        <script src="printaddress.js"></script>
         <h1>Fuel Quote Form</h1>
     </header>
     <body>
@@ -27,6 +28,7 @@
                   <a href="#" class="w3-bar-item w3-button">Media</a>
                 </div>
               </div>
+              <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">LOG OUT</a>
               <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
             </div>
         </div>
@@ -54,7 +56,7 @@
                         
                     </div>
                   </div>
-                  <p>Address: 4800 Calhoun Rd, Houston, TX 77004 </p> <!--Adress-->
+                  <p id="print-address"></p> <!--Address-->
                   <p>Suggested Price / gallon: $3.05</p>
                   <!--<input class="w3-button w3-black w3-section w3-right" id="submitgallonrq" type="submit" value="CALCULATE">-->
                   <button class="w3-button w3-black w3-section w3-right" type="button" id="submitgallonrq" onclick="gallonCal()">CALCULATE</button>

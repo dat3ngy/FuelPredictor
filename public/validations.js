@@ -1,6 +1,4 @@
 
-console.log('testing line');
-console.log('testing line');
 function containsChar(s) {
     for (var i = 0; i < s.length; i++){
         let c = s[i].charCodeAt(0);
@@ -9,7 +7,6 @@ function containsChar(s) {
     }
     return false;
 }
-console.log('testing line');
 
 function containsSpecialChars(str) {
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
@@ -24,15 +21,34 @@ function containsSpace(s){
         if (s[i] == ' ') return true;
     return false;
 }
-console.log('testing line');
-console.log('testing line');
 
 function add(a,b){
     return a + b;
 }
 
+async function UserNameExist(user) {
+        try{
+            const response = await fetch(`http://localhost:3000/login/${user}`, {
+                method: "GET",
+                headers: { "Content-Type": "application/json" },
+            });
+
+            const checkUser = await response.json();
+            console.log(checkUser.rows.length);
+            if (checkUser.rows.length == 0){
+                return false;
+            }
+            else{
+                return true;
+            }
+        } catch(err){
+            console.log(err.message);
+        }
+        
+}
+
 async function checkValidsUserPwd(){
-    console.log("123");
+    console.log("Checking valid username and password...");
     const username = document.querySelector("#user").value;
     const password = document.querySelector("#pw").value;
     const confirm = document.querySelector("#confPw").value;
@@ -47,6 +63,10 @@ async function checkValidsUserPwd(){
 
         if (validUser == false){
             alert("Invalid Username!");
+            event.preventDefault();
+        }
+        else if (await UserNameExist(username) == true){
+            alert("Username is taken! Please try a different username!");
             event.preventDefault();
         }
         else if (validPwd == false){
@@ -72,13 +92,13 @@ async function checkValidsUserPwd(){
             event.preventDefault();
         }
         else{ ///valid, call server
-            console.log("456");
             try{
                 const response = await fetch(`http://localhost:3000/register/${username}/${password}/${confirm}`, {
-                    method: "GET",
+                    method: "POST",
                     headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify()
                 });
-                
+            window.location.href = "afterreg.html";
             } catch(err){
                 console.log(err.message);
             }
@@ -110,8 +130,9 @@ async function checkZip(){
         else{
             try{
                 const response = await fetch(`http://localhost:3000/profile/${fullName}/${address1}/${address2}/${city}/${state}/${zipcode}`, {
-                    method: "GET",
+                    method: "POST",
                     headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify()
                 });
                 var btn = document.getElementById("updatesuccess");
                 btn.innerHTML = "<b>Update successfully!</b>";
@@ -123,6 +144,3 @@ async function checkZip(){
     }
     
 }
- 
-module.exports = containsChar;
-module.exports = checkZip;
