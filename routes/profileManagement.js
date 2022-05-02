@@ -23,7 +23,8 @@ router.post('/:fullName/:address1/:address2/:city/:state/:zipcode', async (req, 
     }
     else{
         var newProfile = await pool.query(`UPDATE clientinformation 
-        SET fullname = '${fullName}', address1 = '${address1}', address2 = '${address2}', city = '${city}', state = '${state}', zipcode = '${zipcode}'`);
+        SET fullname = '${fullName}', address1 = '${address1}', address2 = '${address2}', city = '${city}', state = '${state}', zipcode = '${zipcode}'
+        WHERE username ='${lastUser.username}';`);
     }
     res.json();
 })

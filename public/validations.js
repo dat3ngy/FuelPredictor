@@ -144,3 +144,59 @@ async function checkZip(){
     }
     
 }
+
+async function pwRetrieve(){
+    const user = document.querySelector("#retrieve-user").value;
+    const full = document.querySelector("#retrieve-fullname").value;
+    const zip = document.querySelector("#retrieve-zipcode").value;
+    const password = document.querySelector("#retrieve-password").value;
+    
+    //checking if user enter valid information
+    const response = await fetch(`http://localhost:3000/getprofile/${user}/${full}/${zip}`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+    });
+
+    const userinfo = await response.json();
+
+    //if invalid
+    if (userinfo.rows.length == 0){
+        console.log("Invalid User Information!");
+        var btn = document.getElementById("pwretrieve");
+        btn.innerHTML = "<br> <b>No user information found. Try again!</b>";
+    }
+    //if valid
+    else{
+        //checking validation of new password
+        var ascii = password[0].charCodeAt(0);
+        let validPwd = (password.length >= 5) && (65 <= ascii && ascii <= 90) && (containsSpace(password) == false) && (containsSpecialCharsNumbers(password));
+        if (validPwd == false){
+            if (password.length < 5){
+                alert("Invalid Password! Must have at least 5 characters");
+                event.preventDefault();
+            }
+            else if (65 > ascii || ascii > 90){
+                alert("Invalid Password! Must be capitalized");
+                event.preventDefault();
+            }
+            else if (containsSpace(password)){
+                alert("Invalid Password! Must have no space");
+                event.preventDefault();
+            }
+            else if (containsSpecialCharsNumbers(password) == false){
+                alert("Invalid Password! Must have at least 1 special character or number");
+                event.preventDefault();
+            }console.log('testing line');
+        }
+
+        //if new password is valid, update
+        const response2 = await fetch(`http://localhost:3000/getprofile/${user}/${password}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+        });
+        console.log("Password updated!");
+        var btn = document.getElementById("pwretrieve");
+        btn.innerHTML = "<br> <b>Password updated sucessfully!</b>";
+        const userinfo2 = await response2.json();
+    }
+}

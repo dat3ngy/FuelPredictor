@@ -20,6 +20,5 @@ async function confirmInput() {
         } catch(err){
             console.log(err.message);
         }
-
         
 }

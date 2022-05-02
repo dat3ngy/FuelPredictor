@@ -25,7 +25,7 @@
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                   <a href="#" class="w3-bar-item w3-button">About us</a>
                   <a href="#" class="w3-bar-item w3-button">Join us</a>
-                  <a href="#" class="w3-bar-item w3-button">Media</a>
+                  <a href="https://github.com/dat3ngy/FuelPredictor" class="w3-bar-item w3-button">Media</a>
                 </div>
               </div>
               <a href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">LOG OUT</a>
@@ -57,14 +57,18 @@
                     </div>
                   </div>
                   <p id="print-address"></p> <!--Address-->
-                  <p>Suggested Price / gallon: $3.05</p>
+                  <span>Suggested Price / gallon: </span>
+                  <span id="print-price"></span>
+                  <br> <br>
                   <!--<input class="w3-button w3-black w3-section w3-right" id="submitgallonrq" type="submit" value="CALCULATE">-->
-                  <button class="w3-button w3-black w3-section w3-right" type="button" id="submitgallonrq" onclick="gallonCal()">CALCULATE</button>
-                  
+                 
+                  <button class="w3-button w3-black w3-section w3-right" type="button" id="calculategallonrq" onclick="calPrice()">CALCULATE</button>         
                   <p>Total Amount Due: </p>
                   <div id="printtotal" class="style2">
                         $0.00
                   </div>
+                  <div id="fuelquote"></div> 
+                  <button class="w3-button w3-black w3-section w3-right" type="button" id="submitgallonrq" onclick="gallonCal()">SUBMIT</button>
                   <br> <br>
                   
                 </form>

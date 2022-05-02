@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS usercredentials CASCADE;
 CREATE TABLE usercredentials(
- username VARCHAR(30) PRIMARY KEY REFERENCES clientinformation(username) REFERENCES fuelquote(username),
+ username VARCHAR(30) PRIMARY KEY REFERENCES clientinformation(username),
  password text NOT NULL
 );
 

@@ -22,7 +22,7 @@ router.post('/:galreq/:datereq/:total', async (req, res) => {
     if (lastUserProfile.rows[0].address2 != "NA") address += lastUserProfile.rows[0].address2;
     console.log(address);
     var newQuote = await pool.query(`INSERT INTO fuelquote (id, username, galreqs, deladdr, deldate, price, total) 
-        VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`, [quote_id, lastUser.username, galreq, address, datereq, 3.05, total]);
+        VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`, [quote_id, lastUser.username, galreq, address, datereq, (total/galreq).toFixed(2), total]);
     //console.log(newQuote);
 
     res.json(total);
@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
     const allUsers = await pool.query(`SELECT * FROM usercredentials;`);
     const lastUser = allUsers.rows[allUsers.rows.length-1];
     const lastUserQuoteHistory = await pool.query(`SELECT * FROM fuelquote WHERE username = '${lastUser.username}';`);
-    console.log("There are " + lastUserQuoteHistory.rows.length + " quotes for this user...");
+    console.log("There are " + lastUserQuoteHistory.rows.length + " quote(s) for this user...");
     res.json(lastUserQuoteHistory);
 })
 
