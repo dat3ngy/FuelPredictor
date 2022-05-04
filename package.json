@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "jest --coverage --runInBand"
+    "test": "jest --coverage --runInBand --config=jestconfig.json"
+    
   },
   "repository": {
     "type": "git",

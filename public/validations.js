@@ -22,10 +22,6 @@ function containsSpace(s){
     return false;
 }
 
-function add(a,b){
-    return a + b;
-}
-
 async function UserNameExist(user) {
         try{
             const response = await fetch(`http://localhost:3000/login/${user}`, {

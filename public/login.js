@@ -22,3 +22,5 @@ async function confirmInput() {
         }
         
 }
+
+module.exports = confirmInput
